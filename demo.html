@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Msgbox Demo</title>
+	</head>
+	<body>
+		<button id="add">Add</button>
+		<div class="test"></div>
+
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="jquery.msgbox.min.js"></script>
+		<script type="text/javascript">
+			var msgbox = $('.test').msgbox({
+				'timer': 3000,
+				'lines': 8
+			});
+
+			var i = 0;
+
+			$('#add').on('click', function() {
+				msgbox.msgbox('add', 'Lorem ipsum sit ' + ++i);
+			});
+		</script>
+	</body>
+</html>
